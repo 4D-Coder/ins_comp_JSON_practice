@@ -17,8 +17,9 @@ class InsuranceCompanies
     "$#{dividend / divisor} billion"
   end
 
-  def greater_than(string)
-    
+  def over_55_billion
+    subset = @top_insurance_companies.find_all { |c| c.capitalization_value > 55.0 }
+    format(subset)
   end
 
   private
@@ -27,5 +28,20 @@ class InsuranceCompanies
     data[:InsuranceCompanies][:"Top Insurance Companies"].map do |company|
       InsuranceCompany.new(company)
     end
+  end
+
+  def format(data)
+    collection = []
+
+    for company in data
+      company_data = {
+        "No": company.placement,
+        "Name": company.name,
+        "Market Capitalization": company.market_capitalization
+      }
+      collection.push(company_data)
+    end
+
+    return collection
   end
 end

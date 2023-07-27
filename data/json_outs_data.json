@@ -1,0 +1,43 @@
+{
+  "InsuranceCompanies": {
+    "Time": "Feb 2019",
+    "Average Market Cap": "$88.53 billion",
+    "Market Cap Over 55 Billion": [
+      {
+        "No": "1",
+        "Name": "Berkshire Hathaway ( BRK.A)",
+        "Market Capitalization": "$308 billion"
+      },
+      {
+        "No": "2",
+        "Name": "China Life Insurance (LFC)",
+        "Market Capitalization": "$80 billion"
+      },
+      {
+        "No": "3",
+        "Name": "Allianz (AZSEY) ",
+        "Market Capitalization": "$76.8 billion"
+      },
+      {
+        "No": "4",
+        "Name": "American International Group (AIG)",
+        "Market Capitalization": "$72.3 billion"
+      },
+      {
+        "No": "5",
+        "Name": "Ping An of China (PNGAY)",
+        "Market Capitalization": "$76.8 billion"
+      },
+      {
+        "No": "6",
+        "Name": "MetLife (MET)",
+        "Market Capitalization": "$59.4 billion"
+      },
+      {
+        "No": "7",
+        "Name": "AXA ( AXA)",
+        "Market Capitalization": "$57.8 billion"
+      }
+    ]
+  }
+}

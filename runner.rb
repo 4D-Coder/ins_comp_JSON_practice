@@ -24,5 +24,5 @@ serialized = {
   }
 }
 
-data = JSON.generate(serialized)
+data = JSON.pretty_generate(serialized)
 File.write('data/json_outs_data.json', data)
