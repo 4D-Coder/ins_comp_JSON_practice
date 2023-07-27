@@ -1,6 +1,8 @@
 require_relative './insurance_company'
 
 class InsuranceCompanies
+  attr_reader :time
+
   def initialize(data)
     @time = data[:InsuranceCompanies][:Time]
     @top_insurance_companies = objectify_companies(data)
@@ -12,7 +14,11 @@ class InsuranceCompanies
     dividend = @top_insurance_companies.map do |company|
       company.capitalization_value
     end.sum
-    require 'pry'; binding.pry
+    "$#{dividend / divisor} billion"
+  end
+
+  def greater_than(string)
+    
   end
 
   private

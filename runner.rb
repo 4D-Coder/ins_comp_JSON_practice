@@ -14,5 +14,15 @@ require './lib/insurance_companies.rb'
 data = File.read('./data/json_ins_data.json')
 parsed = JSON.parse(data, symbolize_names: true)
 
-companies = InsuranceCompanies.new(parsed)
-companies.average_market_cap
+insurance_companies = InsuranceCompanies.new(parsed)
+
+serialized = {
+  "InsuranceCompanies": {
+    "Time": insurance_companies.time,
+    "Average Market Cap": insurance_companies.average_market_cap,
+    "Market Cap Over 55 Billion": insurance_companies.over_55_billion
+  }
+}
+
+data = JSON.generate(serialized)
+File.write('data/json_outs_data.json', data)
