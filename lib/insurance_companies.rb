@@ -14,7 +14,6 @@ class InsuranceCompanies
     dividend = @top_insurance_companies.map do |company|
       company.capitalization_value
     end.sum
-    require 'pry'; binding.pry
     "$#{(dividend / divisor).truncate(1)} billion"
   end
 
